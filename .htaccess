@@ -1,0 +1,37 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*) $1.php
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+
+RewriteRule ^dashboard dashboard.php
+
+RewriteRule ^account account.php
+
+RewriteRule ^instances instances.php
+
+RewriteRule ^bedankt-voor-je-aankoop bedankt.php
+
+RewriteRule ^overzicht-accounts overzichtaccount.php
+
+RewriteRule ^add-account add_account.php
+
+RewriteRule ^bewerk edit_file.php
+
+RewriteRule ^instance-toevoegen add_instance.php
+
+RewriteRule ^instance-overzicht instancesoverzicht.php
+
+RewriteRule ^auth/login login.php
+
+RewriteRule ^home index.php
+
+RewriteRule ^home token.txt
+
+RewriteRule ^oldpage$ newpage.php [L]
+
+ErrorDocument 404 https://oshosting.totalh.net/404.html
